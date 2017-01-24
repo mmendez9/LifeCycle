@@ -19,12 +19,17 @@ public class MainActivity extends Activity {
         Toast.makeText(getApplicationContext(), "Creating...", Toast.LENGTH_LONG).show();
 
         Log.d(tag,"onCreate()");
+
+        if (savedInstanceState != null) {
+            // Restore the saved data
+
+        }
     }
 
     @Override
     protected void onStart() {
+         super.onStart();
         Toast.makeText(getApplicationContext(), "Starting...", Toast.LENGTH_LONG).show();
-        super.onStart();
         Log.d(tag, "onStart()");
     }
 
