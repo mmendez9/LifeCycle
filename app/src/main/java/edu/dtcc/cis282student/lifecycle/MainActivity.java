@@ -1,12 +1,13 @@
 package edu.dtcc.cis282student.lifecycle;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private static String tag = "Mayra's App Life Cycle";
 
@@ -33,10 +34,26 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Log.d(tag, "onResume()");
     }
+
+    @Override
+    protected void onPause() {
+        Toast.makeText(getApplicationContext(), "Pausing...", Toast.LENGTH_LONG).show();
+        super.onPause();
+        Log.d(tag, "onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        Toast.makeText(getApplicationContext(), "Stopping...", Toast.LENGTH_LONG).show();
+        super.onStop();
+        Log.d(tag, "onStop()");
+    }
+
     @Override
     protected void onRestart() {
         Toast.makeText(getApplicationContext(), "Restarting...", Toast.LENGTH_LONG).show();
         super.onRestart();
         Log.d(tag, "onRestart()");
     }
+
 }
