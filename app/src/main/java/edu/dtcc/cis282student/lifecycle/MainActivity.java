@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 
         if (savedInstanceState != null) {
             // Restore the saved data
-
+            Log.d(tag, "Data restored");
         }
     }
 
@@ -30,35 +30,47 @@ public class MainActivity extends Activity {
     protected void onStart() {
          super.onStart();
         Toast.makeText(getApplicationContext(), "Starting...", Toast.LENGTH_LONG).show();
+
         Log.d(tag, "onStart()");
     }
 
     @Override
     protected  void onResume() {
-        Toast.makeText(getApplicationContext(), "Resuming...", Toast.LENGTH_LONG).show();
         super.onResume();
+        Toast.makeText(getApplicationContext(), "Resuming...", Toast.LENGTH_LONG).show();
+
         Log.d(tag, "onResume()");
     }
 
     @Override
     protected void onPause() {
-        Toast.makeText(getApplicationContext(), "Pausing...", Toast.LENGTH_LONG).show();
         super.onPause();
+        Toast.makeText(getApplicationContext(), "Pausing...", Toast.LENGTH_LONG).show();
+
         Log.d(tag, "onPause()");
     }
 
     @Override
     protected void onStop() {
-        Toast.makeText(getApplicationContext(), "Stopping...", Toast.LENGTH_LONG).show();
         super.onStop();
+        Toast.makeText(getApplicationContext(), "Stopping...", Toast.LENGTH_LONG).show();
         Log.d(tag, "onStop()");
     }
 
     @Override
     protected void onRestart() {
-        Toast.makeText(getApplicationContext(), "Restarting...", Toast.LENGTH_LONG).show();
         super.onRestart();
+        Toast.makeText(getApplicationContext(), "Restarting...", Toast.LENGTH_LONG).show();
+
         Log.d(tag, "onRestart()");
     }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "Destroying...", Toast.LENGTH_LONG).show();
+
+        Log.d(tag, "onDestroy()");
+    }
 }
