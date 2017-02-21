@@ -32,8 +32,6 @@ public class MainActivity extends Activity {
         Log.d(tag, "onResume()"); // Log Message
         Toast.makeText(getApplicationContext(), "Resuming...",
                 Toast.LENGTH_LONG).show();// Toast Message
-
-
     }
 
     @Override
